@@ -4,7 +4,7 @@
   "description": "A Solana discord bot for live pricing",
   "main": "solanabot.js",
   "scripts": {
-    "start": "node bitcoinbot.js"
+    "start": "node solanabot.js"
   },
   "keywords": [
     "discord",
