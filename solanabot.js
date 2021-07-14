@@ -69,7 +69,7 @@ bot.on('ready', () => {
             //Negative    
             } else {
 
-                botname = "SOL " + newcurrentprice + " -" + newchangestr + "%";
+                botname = "SOL " + newcurrentprice + " " + newchangestr + "%";
                 guildmember.setNickname(botname);
 
                 try {
