@@ -62,7 +62,7 @@ bot.on('ready', () => {
             //Positive
             if (newchangeint >= 0) {
 
-                botname = "SOL " + newcurrentprice + " +" + newchangestr + "%";
+                botname = newcurrentprice + " +" + newchangestr + "%";
                 guildmember.setNickname(botname);
                 try {
                     guildmember.roles.add(bull);
@@ -75,7 +75,7 @@ bot.on('ready', () => {
             //Negative    
             } else {
 
-                botname = "SOL " + newcurrentprice + " " + newchangestr + "%";
+                botname = newcurrentprice + " " + newchangestr + "%";
                 guildmember.setNickname(botname);
 
                 try {
