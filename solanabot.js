@@ -17,13 +17,28 @@ let guildmember;
 //Fetch user and member object of bot
 
 bot.on('ready', () => {
-
     bot.user.setActivity('SOL @ Binance', ({type: "WATCHING"}));
+});
+
+bot.on('message', async (msg) => {
+    const content = msg.content;
+    if (content === "!start SOL") {
+ 
+     var server = msg.guild.id;
+     startMonitoring(server);
+ 
+     msg.channel.send("Started working..");
+ 
+    }
+ 
+ });
+
+function startMonitoring(server_id) {
 
     bot.users.fetch('859089606737002547').then((user) => {
         botobj = user;
     
-        const guild = bot.guilds.cache.get('859080868626300968');
+        const guild = bot.guilds.cache.get(server_id);
         guildmember = guild.member(botobj);
 
     }).catch(console.error);
@@ -95,6 +110,4 @@ bot.on('ready', () => {
 
     }, 1000);
 
-    
-
-});
+}
